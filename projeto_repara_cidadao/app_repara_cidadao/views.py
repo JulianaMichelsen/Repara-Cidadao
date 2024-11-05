@@ -1,6 +1,8 @@
 from lib2to3.fixes.fix_input import context
 
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .forms import CustomUserCreationForm
 
 from .models import Usuario, Reparo  # Importação mais concisa
 from .forms import ReparoModelForm
@@ -10,7 +12,15 @@ def home (request):
 
 
 def cadastro(request):
-    return render(request, 'usuarios/cadastro.html')
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            if 'password1' == 'password2':
+                form.save()  # Salva o usuário com a senha criptografada
+                return redirect('login')  # Redireciona para a página de login ou outro local
+    else:
+        form = CustomUserCreationForm()
+    return render(request, 'usuarios/cadastro.html', {'form': form})
 
 
 def usuarios(request):
@@ -39,6 +49,7 @@ def usuarios(request):
     
     return render(request, 'usuarios/usuarios.html', usuarios)
 
+@login_required
 def cadastro_reparo(request):
     return render(request, 'reparos/cadastro-reparo.html')
 
@@ -56,5 +67,7 @@ def lista_reparos(request):
         'reparos': Reparo.objects.all(),
     }
     return render(request, 'reparos/lista_reparos.html', reparos)
+
+
 
 

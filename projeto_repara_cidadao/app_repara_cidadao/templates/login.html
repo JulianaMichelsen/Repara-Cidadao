@@ -1,0 +1,29 @@
+<!-- login.html -->
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center">Login</h2>
+            <form method="post">
+                {% csrf_token %}
+
+                <!-- Mensagens de erro de login -->
+                {% if form.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        Verifique seu nome de usuário e senha e tente novamente.
+                    </div>
+                {% endif %}
+
+                <!-- Campos do formulário -->
+                {{ form.as_p }}
+
+                <!-- Botão de login -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
