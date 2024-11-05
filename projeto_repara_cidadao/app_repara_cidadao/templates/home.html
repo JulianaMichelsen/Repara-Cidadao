@@ -4,49 +4,255 @@
     <meta charset="UTF-8">
     {% load static %}
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <title>Home</title>
 </head>
 <body>
-    <div class="header">
+<div class="header">
 
-            <div class="container" style="display: flex;">
-            <div><img src="{% static 'images/logo-repara.png' %}" alt="Logo"></div>
+    <div class="container" style="display: flex;">
+        <div><img src="{% static 'images/logo-repara.png' %}" alt="Logo"></div>
 
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Como funciona</a></li>
-                    <li><a href="#">Denunciar</a></li>
-                    <li><a href="#">Sugestões</a></li>
-                    <li><a href="#">Acompanhar</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div><!-- menu -->
+        <div class="menu">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Como funciona</a></li>
+                <li><a href="#">Denunciar</a></li>
+                <li><a href="#">Sugestões</a></li>
+                <li><a href="#">Acompanhar</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div><!-- menu -->
 
-            <div>login</div><!--login-->
-        </div>
+        <div>login</div><!--login-->
+    </div>
 
-            <div class="container">
-            <div class="chamada row">
-                <div class="col-6">
-                    <h1>Seja a Mudança que<br>
-                        Você Quer Ver na <br>
-                        Sua Cidade!</h1>
-                    <p>Desafios crescentes na mobilidade urbana exigem a participação ativa dos cidadãos. Com nosso app, você pode relatar problemas e sugerir melhorias que impactam diretamente a sua comunidade.</p>
-                    <button class="btn btn-light">Saiba mais</button>
-                </div>
-
-                <div class="col-6">
-                    <img class="img-fluid" src="{% static 'images/banner.png' %}" alt="Chamada">
-                </div>
-
-            </div><!--chamada-->
+    <div class="container">
+        <div class="chamada row">
+            <div class="col-6">
+                <h1>Seja a Mudança que<br>
+                    Você Quer Ver na <br>
+                    Sua Cidade!</h1>
+                <p>Desafios crescentes na mobilidade urbana exigem a participação ativa dos cidadãos. Com nosso app,
+                    você pode relatar problemas e sugerir melhorias que impactam diretamente a sua comunidade.</p>
+                <button class="btn btn-light">Saiba mais</button>
             </div>
 
-    </div><!--header-->
+            <div class="col-6">
+                <img class="img-fluid" src="{% static 'images/banner.png' %}" alt="Chamada">
+            </div>
+
+        </div><!--chamada-->
+    </div>
+
+</div><!--header-->
+
+<div class="container como-funciona"><!--como funciona -->
+
+    <h2>Como funciona?</h2>
+    <div class="row">
+        <div class="col-4 coluna-como-funciona">
+            <img class="img-fluid" src="{% static 'images/denuncie.png' %}" alt="denuncie problemas">
+            <h3>Denuncie Problemas</h3>
+            <hr>
+            <ul>
+                <li>
+                    Identifique buracos, calçadas quebradas, semáforos fora de funcionamento e outros obstáculos à
+                    mobilidade.
+                </li>
+                <li>
+                    Envie Fotos para ilustrar a situação.
+                </li>
+                <li>
+                    Informe o Local manualmente ou descreva onde o problema está.
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="col-4 coluna-como-funciona">
+            <img class="img-fluid" src="{% static 'images/sugira.png' %}" alt="sugira melhorias">
+            <h3>Sugira Melhorias</h3>
+            <hr>
+            <ul>
+                <li>
+                    Proponha Ações como a instalação de rampas de acessibilidade, ciclovias ou piso tátil.
+                </li>
+                <li>
+                    Contribua para uma cidade mais inclusiva e acessível.
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-4 coluna-como-funciona">
+            <img class="img-fluid" src="{% static 'images/acompanhe.png' %}" alt="acompanhe suas denuncias e sugestoes">
+            <h3>Acompanhe suas Denúncias e Sugestões</h3>
+            <hr>
+            <ul>
+                <li>
+                    Acompanhe o Status: receba atualizações sobre suas denúncias (recebido, em análise, resolvido).
+                </li>
+                <li>
+                    Transparência entre o poder público e a população.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div> <!-- como funciona -->
+
+
+<div class="container-fluid transformando-container"><!--transformando a mobilidade -->
+    <h2 class="titulo-transformando">Transformando a Mobilidade Urbana Juntos</h2>
+    <p class="text-center">Graças ao engajamento e participação da comunidade, já alcançamos várias melhorias
+        significativas nas cidades. </p>
+    <p class="text-center"><b>Aqui estão alguns resultados notáveis que refletem o impacto de nossas denúncias e
+        sugestões:</b></p>
+    <div class="row row-transformando">
+        <div class="col-4 coluna-transformando">
+            <h3 class="numbers">500</h3>
+            <h4>Buracos repados</h4>
+            <hr>
+            <p>Mais de 500 buracos foram reparados em diversas localidades, melhorando a segurança para motoristas e
+                pedestres.</p>
+        </div>
+
+        <div class="col-4 coluna-transformando">
+            <h3 class="numbers">175</h3>
+            <h4>Semáforos Reinstalados</h4>
+            <hr>
+            <p>175 semáforos que estavam fora de funcionamento foram consertados, aumentando a segurança no
+                trânsito.</p>
+        </div>
+
+        <div class="col-4 coluna-transformando">
+            <h3 class="numbers">300</h3>
+            <h4>Calçadas Reparadas</h4>
+            <hr>
+            <p>300 calçadas foram reformadas, garantindo acessibilidade para pessoas com deficiência e mobilidade
+                reduzida.</p>
+        </div>
+
+    </div>
+</div> <!-- transformando a mobilidade -->
+
+
+<div class="container"><!--voce no comando -->
+    <div class="row">
+        <div class="col-6">
+            <img class="img-fluid" src="{% static 'images/alerta.png' %}" alt="Alerta">
+        </div>
+
+        <div class="col-6 coluna-comando">
+            <h3>Você no comando!</h3>
+            <hr>
+            <p>Denuncie problemas, acompanhe as soluções e ajude a construir um futuro melhor. Sua participação ativa
+                transforma sua comunidade.</p>
+            <button class="btn btn-danger">Denuncie problemas aqui!</button>
+        </div>
+    </div>
+</div> <!-- voce no comando -->
+
+
+<div class="container-fluid fique-por-dentro"><!--fique por dentro -->
+    <div class="row">
+        <div class="col-12">
+            <h2>Fique por dentro</h2>
+
+
+            <form class="form-inline justify-content-center mt-3" style="display:flex; margin: 0 -24px;">
+                <div class="form-group mx-sm-2 mb-2 col-5">
+                    <input type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group mx-sm-2 mb-2 col-5">
+                    <input type="email" class="form-control" placeholder="Seu melhor e-mail">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+            </form>
+            <p class="mt-3">Assine nossa newsletter para receber atualizações sobre melhorias na sua cidade e dicas de
+                mobilidade!</p>
+
+        </div>
+    </div>
+</div> <!-- fique por dentro -->
+
+<div class="container-fluid duvidas-frequentes"><!--duvidas frequentes -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center">Duvidas frequentes</h3>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                            the collapse plugin adds the appropriate classes that we use to style each element.
+                            These classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default
+                            variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
+                            though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                            until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding
+                            via CSS transitions. You can modify any of this with custom CSS or overriding our
+                            default variables. It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                            the collapse plugin adds the appropriate classes that we use to style each element.
+                            These classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default
+                            variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
+                            though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> <!-- duvidas frequentes -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
